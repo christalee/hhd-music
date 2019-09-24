@@ -18,8 +18,8 @@ melody = \relative c' {
 \time 3/4
 \key d \minor
 \clef treble
-\tempo "Freely; louder each time through"
 
+\mark \markup { \italic "Freely; louder each time through" }
 \partial 4 d8 d8 | \repeat volta 3 { \relative c' {
 	 d2 d8 d8 | d2 d4 | f e d | f e4. r8 |
 	e4 e4. a,8 | e'4 e4 e8 e8 | g4 f e | f8( e) d2~ |

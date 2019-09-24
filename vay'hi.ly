@@ -29,7 +29,7 @@ harmonies = \chordmode {
 }
 
 melody = \relative c' {
-	\set Staff.shortInstrumentName = #"All"
+	\set Staff.shortInstrumentName = #"Choir"
 
 	\repeat volta 2 { \relative c'' {
 		b2 g8. a16 | b2 a4 | a( g) fis8.( a16) | g2 r4 | \break

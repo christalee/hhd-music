@@ -4,9 +4,13 @@
 	markup-system-spacing.minimum-distance = #8
 	markup-system-spacing.padding = #4
 	markup-markup-spacing.minimum-distance = #8
+	%{ score-markup-spacing.padding = #2 %}
+	%{ score-system-spacing.padding = #2 %}
 	#(set-paper-size "letter")
 	left-margin = 0.75\in
 	right-margin = 0.75\in
+	top-margin = 0.5\in
+	bottom-margin = 0.5\in
 	indent = #0
 }
 
@@ -24,6 +28,7 @@
     \Score
     \override RehearsalMark.padding = #3
 		\override RehearsalMark.self-alignment-X = #LEFT
+		\override SystemStartBar.collapse-height = #4
   }
   \context {
     \ChordNames
