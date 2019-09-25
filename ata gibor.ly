@@ -1,5 +1,3 @@
-%{ TODO check text; %}
-
 \include "cbieber.ily"
 \paper {
 	print-all-headers = ##t

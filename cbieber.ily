@@ -47,3 +47,5 @@
 		\override InstrumentName.padding = #2
 	}
 }
+
+\midi { \tempo 4 = 90 }

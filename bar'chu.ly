@@ -1,3 +1,4 @@
+%{ TODO rewrite accompaniment with chords?  %}
 \include "cbieber.ily"
 
 \header {
@@ -80,4 +81,5 @@ bass = \relative c' {
 	>>
 >>
 	\layout { }
+	\midi { }
 }

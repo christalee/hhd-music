@@ -1,13 +1,13 @@
 \include "cbieber.ily"
 
 \header {
-title = "Vay'hi"
-composer = "Solomon Sulzer"
-poet = "Liturgy"
+	title = "Vay'hi"
+	composer = "Solomon Sulzer"
+	poet = "Liturgy"
 }
 
 cantor_h = \chordmode {
-	\partial 4 g4 | g2. | g2. | e2:m a4:7 | d2. | g2 b4:7/fis | e2:m g4/d | a2:m/g d4:7 | g2. | c2 c8 d8:7/g | g2/b a4:m7 | e2.:m/b | b2:7 d4:7/a |
+	\partial 4 s4 | g2. | g2. | e2:m a4:7 | d2. | g2 b4:7/fis | e2:m g4/d | a2:m/g d4:7 | g2. | c2 c8 d8:7/g | g2/b a4:m7 | e2.:m/b | b2:7 d4:7/a |
 }
 
 cantor_m =  \relative c' {
@@ -25,7 +25,7 @@ cantor_l = \lyricmode {
 harmonies = \chordmode {
 	g2 c4/g | g2 a4:m/c | d2 b4:7/dis | e2.:m |
 	a2:m d4:m/a | a2:m d4:m6 | e2:7sus4 e4:7 | a2:m d4:7 |
-	g2 g4/b | c2 a4:m | g2/d d4:7 | g2.
+	g2 g4/b | c2 a2:m | g4/d d4:7 | g2.
 }
 
 melody = \relative c' {
@@ -78,4 +78,5 @@ second = \lyricmode {
 
 >>
 	\layout { }
+	\midi { }
 }
