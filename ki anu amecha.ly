@@ -33,12 +33,14 @@ text = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmony }
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
->>
+	>>
+
  	\layout { }
+	\midi { }
 }
 
 \markup {

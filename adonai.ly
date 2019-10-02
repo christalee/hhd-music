@@ -1,3 +1,4 @@
+%{ TODO fix harmony %}
 \include "cbieber.ily"
 
 \header {
@@ -7,7 +8,7 @@
 }
 
 harmony = \chordmode {
-	\partial 4 s4 | d2.:m | d2.:m | d2.:m | a2.:7 |
+	\partial 4 s4 | d2.:m | d2.:m | d2.:m | f2.:m/c |
 	g2.:m | g2.:m | a2.:7 | d2.:m |
 	d2.:m | d2.:m | d2.:m | d2.:m |
 	g2.:m | d2.:m | g2:m e4:7 | a2. |
@@ -37,11 +38,12 @@ text = \lyricmode {
 }
 
 \score {
-<<
-	\new ChordNames {	\harmony }
+	<<
+	%{ \new ChordNames {	\harmony } %}
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
->>
+	>>
+
 	\layout { }
 	\midi { }
 }

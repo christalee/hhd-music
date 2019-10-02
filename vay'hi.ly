@@ -1,3 +1,4 @@
+%{ TODO fix midi output %}
 \include "cbieber.ily"
 
 \header {
@@ -51,9 +52,8 @@ verseB = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \cantor_h }
-
 	\new Voice = "cantor" {
 		\time 3/4
 		\key e \minor
@@ -62,13 +62,12 @@ verseB = \lyricmode {
 	}
 
 	\new Lyrics \lyricsto "cantor" { \cantor_l }
->>
+	>>
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmony }
-
 	\new Voice = "chorus" {
 		\time 3/4
 		\key e \minor
@@ -80,13 +79,13 @@ verseB = \lyricmode {
 		\set stanza = #"1. "
 		\verseA
 	}
+
 	\new Lyrics \lyricsto "chorus" {
 		\set stanza = #"2. "
 		\verseB
 	}
-
->>
+	>>
 }
 
 \layout { }
-\midi { }
+%{ \midi { } %}

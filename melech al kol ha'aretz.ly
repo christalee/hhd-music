@@ -1,3 +1,4 @@
+%{ TODO try shifting up a 3rd? %}
 \include "cbieber.ily"
 
 \header {
@@ -28,11 +29,12 @@ verseB = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmony }
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \verseA \verseA }
->>
+	>>
+
 	\layout { }
 	\midi { }
 }

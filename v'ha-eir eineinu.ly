@@ -5,7 +5,6 @@
 	title = "V'ha-eir Eineinu"
 	poet = "Psalm 86:11"
 	composer = "Shlomo Carlebach"
-	%{ meter = { \bold "Brightly" } ( = 84) %}
 }
 
 harmonyA = \chordmode {
@@ -79,6 +78,7 @@ refrain = \lyricmode {
 
 	}
 	>>
+
 	\layout { }
 	\midi { }
 }

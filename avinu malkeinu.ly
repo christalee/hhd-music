@@ -30,7 +30,6 @@ melody = \relative c' {
 	a a a bes a \breathe f8 | a a a16 c16 bes8 a \breathe f8 | \break
 	a bes c bes( a) ges | f4.( f8) r8 \mark "Fine" s8 | \break
 
-
 	\mark \markup { \italic "repeat with harmony" }
 	\repeat volta 2 { \relative c' {
 		\partial 8 f8 | des'4 c8 des4( c8) | bes4.( bes8) r8 bes8 |
@@ -51,11 +50,12 @@ text = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmony }
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
->>
+	>>
+
 	\layout { }
 	\midi { }
 }

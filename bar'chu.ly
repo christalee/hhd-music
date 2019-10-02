@@ -79,5 +79,7 @@ bass = \relative c' {
 		\new Staff \bass
 		>>
 	>>
+
 	\layout { }
+	\midi { }
 }

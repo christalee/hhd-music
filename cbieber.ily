@@ -1,3 +1,7 @@
+%{ Christalee Bieber
+cbieber@alum.mit.edu
+September 2019 %}
+
 \paper {
 	system-system-spacing.minimum-distance = #8
 	system-system-spacing.padding = #4
@@ -5,7 +9,6 @@
 	markup-system-spacing.padding = #4
 	markup-markup-spacing.minimum-distance = #8
 	score-markup-spacing.padding = #4
-	%{ score-system-spacing.padding = #2 %}
 	#(set-paper-size "letter")
 	left-margin = 0.75\in
 	right-margin = 0.75\in

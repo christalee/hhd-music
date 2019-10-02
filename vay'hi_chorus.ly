@@ -1,4 +1,4 @@
-%{ TODO tidy up av harachamim include? %}
+%{ TODO tidy up av harachamim include? fix midi output %}
 \include "cbieber.ily"
 
 \paper {
@@ -23,10 +23,10 @@ textA = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new Voice = "chorus" { \melodyA }
 	\new Lyrics \lyricsto "chorus" { \textA }
->>
+	>>
 	\header {
 		instrument = "Av Harachamim"
 		poet = "Liturgy"
@@ -62,9 +62,8 @@ verseB = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmonyB }
-
 	\new Voice = "chorus" {
 		\time 3/4
 		\key e \minor
@@ -76,12 +75,13 @@ verseB = \lyricmode {
 		\set stanza = #"1. "
 		\verseA
 	}
+
 	\new Lyrics \lyricsto "chorus" {
 		\set stanza = #"2. "
 		\verseB
 	}
 
->>
+	>>
 	\header {
 		instrument = "Ki Mi-Tzion"
 		composer = "Solomon Sulzer"
@@ -90,3 +90,4 @@ verseB = \lyricmode {
 }
 
 \layout { }
+\midi { }

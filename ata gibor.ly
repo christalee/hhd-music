@@ -1,9 +1,13 @@
+%{ TODO fix midi output %}
 \include "cbieber.ily"
+
 \paper {
 	print-all-headers = ##t
 	system-system-spacing.padding = #2
 	markup-system-spacing.padding = #0
+	score-markup-spacing.padding = #0
 }
+
 \header{
 	copyright = ##f
 	tagline = "September 2019 - Christalee Bieber"
@@ -66,7 +70,7 @@
 		composer = "S. Braslavsky"
 	}
 }
-\pageBreak
+
 \score {
 	<<
 	\new Staff \relative c' {
@@ -138,3 +142,4 @@
 }
 
 \layout { }
+\midi { }

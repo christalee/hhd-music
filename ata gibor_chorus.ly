@@ -1,5 +1,6 @@
-%{ TODO center markup blocks on page %}
+%{ TODO fix midi output %}
 \include "cbieber.ily"
+
 \paper {
 	print-all-headers = ##t
 }
@@ -18,7 +19,6 @@
 		\key bes \major
 		\clef treble
 		\time 4/4
-		%{ \set Staff.vocalName = #"Choir" %}
 
 		\partial 8 d8 | g8.( a16) bes4 bes bes8 bes | a( g a bes) g4 r8 d8 | \break
 		g8.( a16) bes4 bes bes8 bes | a g a bes g4 r8 d'8 |
@@ -41,14 +41,13 @@
 		composer = "S. Braslavsky"
 	}
 }
-%{ \pageBreak %}
+
 \score {
 	<<
 	\new Staff \relative c' {
 		\key bes \major
 		\clef treble
 		\time 4/4
-		%{ \set Staff.vocalName = #"Choir" %}
 
 		d4( bes') a( g) | fis8( g a fis) g2 | d4( d' c) bes | a8( bes) c( a) bes2 |
 		d2 c4. a8 | bes8.( a16) bes8 c bes4( a) | \slashedGrace a8 a4( ees') d( c8) c8 | bes4 a g2 |
@@ -92,3 +91,4 @@
 }
 
 \layout { }
+\midi { }

@@ -1,3 +1,4 @@
+%{ TODO fix midi output %}
 \include "cbieber.ily"
 
 \header {
@@ -47,7 +48,7 @@ melodyB = \relative c' {
 	>>
 }
 
-\markup \cantor { Yitbarach v'yishtabach v'yitpaar v'yitromam v'yitnase v'yit'hadar v'yitale v'yit'halal }
+\markup \cantor { Yitbarach v'yishtabach v'yitpaar v'yitromam v'yitnase v'yit'hadar v'yitale v'yit'halal. }
 
 \score {
 	<<
@@ -57,3 +58,4 @@ melodyB = \relative c' {
 }
 
 \layout { }
+\midi { }

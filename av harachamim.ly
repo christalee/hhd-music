@@ -1,4 +1,4 @@
-%{ TODO fix chords %}
+%{ TODO fix harmony %}
 \include "cbieber.ily"
 
 \header {
@@ -7,9 +7,9 @@
 }
 
 harmony = \chordmode {
-	e4:m b:m/d a:m/c a:m | e1:m/g | a2:m/c g4/b d:7/a | b2:aug7 c4 a:m6 | e2:m/b b:7 | e1:m |
-	g2. b4:m/fis | e2.:m g4/d | c4 g/d c:6 d:7 | g1 | a2:m/c g4/b d:7/a | b2:aug7 c4. a8:m6 | e2:m/b b:7 | e1:m |
-	g2. b4:m/fis | e2.:m g4/d | c4 g/d c:6 d:7 | g1 | a2:m/c g4/b d:7/a | b2:aug7 c4. a8:m6 | e2:m/b b:7 | e1:m |
+	e4:m b:m/d a:m/c a:m | e1:m/g | a2:m/c g4/b d:7/a | e2:m/g c4 a:m6 | e2:m/b d2 | e1:m |
+	g2. b4:m/fis | e2.:m g4/d | c4 g/d c:6 d:7 | g1 | a2:m/c g4/b d:7/a | e2:m/g c4. a8:m6 | e2:m/b d2 | e1:m |
+	g2. b4:m/fis | e2.:m g4/d | c4 g/d c:6 d:7 | g1 | a2:m/c g4/b d:7/a | e2:m/g c4. a8:m6 | e2:m/b d2 | e1:m |
 }
 
 melody = \relative c' {
@@ -29,11 +29,12 @@ text = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	%{ \new ChordNames { \harmony } %}
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
->>
+	>>
+
 	\layout { }
 	\midi { }
 }

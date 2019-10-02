@@ -10,7 +10,6 @@ harmony = \chordmode {
 	\partial 8 s8 | e2:m e:m7/d | c4.:maj7 e8:m/b a4:m e4:m | fis2:m7.5- b4:7sus4 b4:7 | e1:m | e2:m e:m7/d | c4.:maj7 e8:m/b a4:m e4:m | fis2:m7.5- b2:7 | e1:m |
 	g4 g:7 c/g g | d2:7 b4:7/dis e:m | g2 c4/e fis:7 | b2 b:7 |
 	e2:m e:m7/d | c4.:maj7 e8:m/b a4:m e4:m | fis2:m7.5- b4:7 | e1:m |
-
 }
 
 melody = \relative c' {
@@ -32,11 +31,12 @@ text = \lyricmode {
 }
 
 \score {
-<<
+	<<
 	\new ChordNames { \harmony }
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
->>
+	>>
+
 	\layout { }
 	\midi { }
 }

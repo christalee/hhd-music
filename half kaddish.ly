@@ -1,7 +1,11 @@
 \include "cbieber.ily"
 
+\paper {
+		system-system-spacing.padding = #3
+}
+
 \header {
-	subtitle = "Half Kaddish"
+	instrument = "Half Kaddish"
 	composer = "Wolf Shastopol"
 	arranger = "ed. Laurence Avery"
 }
@@ -13,7 +17,6 @@ text = \lyricmode {
 
 	B' -- cha -- ye -- chom uv' -- yo -- me -- chon, u -- v' -- cha -- ye d' -- chol beit Yis -- ra -- el, ba -- ga -- la __ u' -- viz' -- man ka -- riv |
 	v' -- im -- m' -- ru A -- men. Y' -- he sh'me ra -- ba m' -- va -- rach l' -- a -- lam ul' -- al' -- me al' -- ma -- ya yit -- ba -- rach |
-
 }
 
 verseA = \lyricmode {
@@ -57,7 +60,7 @@ melody = \relative c' {
 }
 
 \score {
-<<
+	<<
 	\new Voice = "one" { \melody }
 	\new Lyrics \lyricsto "one" {
 		\text
@@ -67,7 +70,8 @@ melody = \relative c' {
 		>>
 		\coda
 	}
->>
+	>>
+
 	\layout { }
 	\midi { }
 }
