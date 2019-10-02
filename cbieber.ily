@@ -4,7 +4,7 @@
 	markup-system-spacing.minimum-distance = #8
 	markup-system-spacing.padding = #4
 	markup-markup-spacing.minimum-distance = #8
-	%{ score-markup-spacing.padding = #2 %}
+	score-markup-spacing.padding = #4
 	%{ score-system-spacing.padding = #2 %}
 	#(set-paper-size "letter")
 	left-margin = 0.75\in
@@ -26,9 +26,12 @@
   }
   \context {
     \Score
+		\numericTimeSignature
     \override RehearsalMark.padding = #3
 		\override RehearsalMark.self-alignment-X = #LEFT
 		\override SystemStartBar.collapse-height = #4
+		\override MetronomeMark.outside-staff-priority = #10000
+		\override MetronomeMark.extra-offset = #'(-8 . 2)
   }
   \context {
     \ChordNames
@@ -49,3 +52,21 @@
 }
 
 \midi { \tempo 4 = 90 }
+
+#(define-markup-list-command (cantor layout props text) (markup-list?)
+	(interpret-markup-list layout props
+		#{\markuplist {
+			\hspace #6
+			\box {
+				\pad-markup #1 {
+					\fontsize #2 {
+						\wordwrap {
+							{ \bold Cantor: } { #text }
+						}
+					}
+				}
+			}
+		}
+		#}
+	)
+)

@@ -1,4 +1,3 @@
-%{ TODO figure out harmony, key signature %}
 \include "cbieber.ily"
 
 \header {
@@ -7,17 +6,17 @@
 }
 
 harmony = \chordmode {
-	aes1:m | aes1:m | aes1:m | c1 |
+	f1:m | f1:m | f1:m | c1:7 |
 	c1:7 | c1:7 | c1:7 | f1:m |
 }
 
 melody = \relative c'' {
 	\time 4/4
-	\key aes \minor
+	\key f \minor
 	\clef treble
 
-	aes4 aes r8 ges8 fes ges | aes4 aes r4. aes8 | aes4 ges a aes | ges2. r4 |
-	ges4 ges r8 fes8 ees fes | ges4 ges r4. ges8 | ges4 fes aes ges | fes2. r4 | \bar ":|."
+	aes4 aes r8 g8 f g | aes4 aes r4. aes8 | aes4 g bes aes | g2. r4 |
+	g4 g r8 f8 e f | g4 g r4. g8 | g4 f aes g | f2. r4 | \bar ":|."
 }
 
 verseA = \lyricmode {
@@ -30,7 +29,7 @@ verseB = \lyricmode {
 
 \score {
 <<
-	%{ \new ChordNames { \harmony } %}
+	\new ChordNames { \harmony }
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \verseA \verseA }
 >>

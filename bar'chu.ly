@@ -3,8 +3,8 @@
 
 \header {
 	title = "Bar'chu"
-	composer = "Nusach melody"
-	arranger = "E. Schliefer, after S. Adler"
+	composer = "Nusach"
+	arranger = "E. Schleifer, after S. Adler"
 }
 
 text = \lyricmode {
@@ -25,7 +25,6 @@ melody = \relative c' {
 
 	\set Staff.shortInstrumentName = #"Cantor"
 	\partial 8 d'8 | d4 c8 d8 c4( bes4) | bes8. bes16 a8( bes8) c8( bes16 a16 g4~ | g8) g16 g16 g8.( d'16 c4. g8 | aes8 g \tuplet 3/2 { aes f) c' } c( g4.) \bar "|."
-	\addlyrics { \text }
 }
 
 treble = \relative c' {
@@ -71,15 +70,14 @@ bass = \relative c' {
 }
 
 \score {
-<<
+	<<
 	\new Voice = "one" { \melody }
 	\new Lyrics \lyricsto "one" { \text }
 	\new PianoStaff
-	<<
+		<<
 		\new Staff \treble
 		\new Staff \bass
+		>>
 	>>
->>
 	\layout { }
-	\midi { }
 }

@@ -22,61 +22,71 @@ cantor_l = \lyricmode {
 	Va -- y' -- | hi bi -- n' -- | so -- ah ha -- a -- | ron va -- yo -- mer mo -- | she | ku ma A -- do -- | nai v' -- ya -- | fu -- tzu o -- y' -- | ve -- cha v' -- ya -- | nu -- su m' -- sa -- ne -- cha mi -- pa -- | ne -- | cha |
 }
 
-harmonies = \chordmode {
+harmony = \chordmode {
 	g2 c4/g | g2 a4:m/c | d2 b4:7/dis | e2.:m |
 	a2:m d4:m/a | a2:m d4:m6 | e2:7sus4 e4:7 | a2:m d4:7 |
 	g2 g4/b | c2 a2:m | g4/d d4:7 | g2.
 }
 
 melody = \relative c' {
-	\set Staff.shortInstrumentName = #"Choir"
+	\set Staff.vocalName = #"Choir"
 
 	\repeat volta 2 { \relative c'' {
-		b2 g8. a16 | b2 a4 | a( g) fis8.( a16) | g2 r4 | \break
+		\bar ".|:" b2 g8. a16 | b2 a4 | a( g) fis8.( a16) | g2 r4 | \break
 		c2 a8. b16 | c2 b4 | b( a) gis8.( b16) | a2 \breathe a8. a16 | \break
 		b2 g8 fis8 | e2 a8 b | c4 b a | g2 r4 |
 	}}
 }
 
-first = \lyricmode {
+verseA = \lyricmode {
 	Ki mi -- tzi -- | yon  tei -- | tzei __ to -- | rah |
 	ki mi -- tzi -- | yon  tei -- | tzei __ to -- | rah  u -- d' -- |
 	var A -- do -- | nai mi -- _ | ru -- sha -- la -- | yim |
 }
 
-second = \lyricmode {
+verseB = \lyricmode {
 	Baruch she -- na -- | tan to -- | rah __ to -- | rah |
 	baruch she -- na -- | tan to -- | rah __ to -- | rah l' -- a -- |
-	mo yis -- ra -- | el bik -- du -- | _ sha -- _ | to |
+	mo Yis -- ra -- | el bik -- du -- | _ sha -- _ | to |
 }
 
 \score {
 <<
-	\new ChordNames {
-		\cantor_h
-		\harmonies
+	\new ChordNames { \cantor_h }
+
+	\new Voice = "cantor" {
+		\time 3/4
+		\key e \minor
+		\clef treble
+		\cantor_m
 	}
+
+	\new Lyrics \lyricsto "cantor" { \cantor_l }
+>>
+}
+
+\score {
+<<
+	\new ChordNames { \harmony }
 
 	\new Voice = "chorus" {
 		\time 3/4
 		\key e \minor
 		\clef treble
-		\cantor_m
 		\melody
 	}
 
-\new Lyrics \lyricsto "chorus" {
-	\cantor_l
-	<<
-	{ \set stanza = #"1. "
-		\first }
-	\new Lyrics {
+	\new Lyrics \lyricsto "chorus" {
+		\set stanza = #"1. "
+		\verseA
+	}
+	\new Lyrics \lyricsto "chorus" {
 		\set stanza = #"2. "
-		\second }
-	>>
-}
+		\verseB
+	}
 
 >>
-	\layout { }
-	\midi { }
 }
+
+\layout { }
+\midi { }
