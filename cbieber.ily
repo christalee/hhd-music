@@ -3,18 +3,22 @@ cbieber@alum.mit.edu
 September 2019 %}
 
 \paper {
-	system-system-spacing.minimum-distance = #8
-	system-system-spacing.padding = #4
-	markup-system-spacing.minimum-distance = #8
-	markup-system-spacing.padding = #4
-	markup-markup-spacing.minimum-distance = #8
+	system-system-spacing.minimum-distance = #6
+	system-system-spacing.padding = #2
+	markup-system-spacing.minimum-distance = #4
+	markup-system-spacing.padding = #2
+	markup-markup-spacing.minimum-distance = #6
+	markup-markup-spacing.padding = #4
 	score-markup-spacing.padding = #4
+
 	#(set-paper-size "letter")
 	left-margin = 0.75\in
 	right-margin = 0.75\in
 	top-margin = 0.5\in
 	bottom-margin = 0.5\in
 	indent = #0
+
+	print-all-headers = ##t
 }
 
 \header {
@@ -34,7 +38,7 @@ September 2019 %}
 		\override RehearsalMark.self-alignment-X = #LEFT
 		\override SystemStartBar.collapse-height = #4
 		\override MetronomeMark.outside-staff-priority = #10000
-		\override MetronomeMark.extra-offset = #'(-8 . 2)
+		\override MetronomeMark.extra-offset = #'(-8 . 1)
   }
   \context {
     \ChordNames

@@ -1,21 +1,23 @@
-%{ TODO fix midi output %}
 \include "cbieber.ily"
+
+\paper {
+	print-all-headers = ##f
+}
 
 \header {
 	title = "Half Kaddish"
 	composer = "Wolf Shastopol"
-	arranger = "ed. Laurence Avery"
+	arranger = "ed. Lawrence Avery"
 }
 
 text = \lyricmode {
-	B' -- cha -- ye -- chom uv' -- yo -- me -- chon, u -- v' -- cha -- ye d' -- chol beit Yis -- ra -- el, ba -- ga -- la __ u' -- viz' -- man ka -- riv |
-	v' -- im -- m' -- ru A -- men. Y' -- he sh'me ra -- ba m' -- va -- rach l' -- a -- lam ul' -- al' -- me al' -- ma -- ya yit -- ba -- rach |
+	B' -- cha -- ye -- chon uv' -- yo -- me -- chon, u -- v' -- cha -- ye d' -- chol beit Yis -- ra -- el, ba -- ga -- la __ u' -- viz' -- man ka -- riv, v' -- im -- m' -- ru: A -- men. Y' -- he sh'me ra -- ba m' -- va -- rach l' -- a -- lam ul' -- al' -- me al' -- ma -- ya yit -- ba -- rach |
 }
 
 coda = \lyricmode {
-	B'rich hu l' -- e -- la -- lu -- le -- la -- min kol bir -- cha -- ta v' -- shi -- ra -- ta,
-	tush -- b' -- cha -- ta v' -- ne -- che -- ma -- ta, da' -- a -- mi -- ran b' -- al' -- ma
-	v' -- im -- m' -- ru | A -- men. |
+	B'rich hu l' -- e -- la -- lu -- le -- la min kol bir -- cha -- ta v' -- shi -- ra -- ta,
+	tush -- b' -- cha -- ta v' -- ne -- che -- ma -- ta, da' -- a -- mi -- ran b' -- al' -- ma,
+	v' -- im -- m' -- ru: | A -- men. |
 }
 
 melodyA = \relative c' {
@@ -39,7 +41,7 @@ melodyB = \relative c' {
 \markup \cantor { Yitgadal v'yitkadash sh'me raba.
 	\hspace #15
 	{ \bold Chorus: } AMEN
-	{ \bold Cantor: } B'al'ma div'ra chirute v'yamlich mal chute. }
+	{ \bold Cantor: } B'al'ma div'ra chirute v'yamlich malchute. }
 
 \score {
 	<<
@@ -48,7 +50,7 @@ melodyB = \relative c' {
 	>>
 }
 
-\markup \cantor { Yitbarach v'yishtabach v'yitpaar v'yitromam v'yitnase v'yit'hadar v'yitale v'yit'halal. }
+\markup \cantor { Yitbarach v'yishtabach v'yitpa'ar v'yitromam v'yitnase v'yit'hadar v'yitale v'yit'halal sh'me d'kud'sha. }
 
 \score {
 	<<
@@ -58,4 +60,3 @@ melodyB = \relative c' {
 }
 
 \layout { }
-\midi { }

@@ -1,14 +1,8 @@
-%{ TODO rewrite accompaniment with chords?  %}
+%{ TODO rewrite accompaniment with chords? omit last system %}
 \include "cbieber.ily"
 
-\header {
-	title = "Bar'chu"
-	composer = "Nusach"
-	arranger = "E. Schleifer, after S. Adler"
-}
-
 text = \lyricmode {
-	Ba -- | r' -- chu __ | el a -- do -- nai ha m' -- vo -- | rach, Ba -- | ruch a -- do -- nai __ | ha m' -- vo -- rach __ | l' -- o -- lam __ | va -- ed. Ba -- | ruch a -- do -- nai __ | ha m' -- vo -- rach __ | l' -- o -- lam __ | va -- ed.
+	Ba -- | r' -- chu __ | et A -- do -- nai ha m' -- vo -- | rach, Ba -- | ruch A -- do -- nai __ | ha m' -- vo -- rach __ | l' -- o -- lam __ | va -- ed. Ba -- | ruch A -- do -- nai __ | ha m' -- vo -- rach __ | l' -- o -- lam __ | va -- ed.
 }
 
 melody = \relative c' {
@@ -79,6 +73,12 @@ bass = \relative c' {
 		\new Staff \bass
 		>>
 	>>
+
+	\header {
+		title = "Bar'chu"
+		composer = "Nusach"
+		arranger = "E. Schleifer, after S. Adler"
+	}
 
 	\layout { }
 	\midi { }

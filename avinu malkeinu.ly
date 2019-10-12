@@ -1,12 +1,5 @@
 \include "cbieber.ily"
 
-\header {
-	title = "Avinu Malkeinu"
-	subtitle = "אָבִינוּ מַלְכֵּנוּ‎"
-	composer = "Folk melody"
-	arranger = "trans. E. Schleifer, 1988"
-}
-
 harmony = \chordmode {
 	\partial 8 s8 | f4. ees4.:m  | f2. |
 	f4. ees4.:m | f2. |
@@ -46,7 +39,7 @@ melody = \relative c' {
 }
 
 text = \lyricmode {
-	A -- | vi -- nu mal -- kei -- | nu, __ cho -- | nei -- nu va -- a -- nei -- | nu, __ a -- | vi -- nu mal -- kei -- nu, cho -- | nei -- nu va -- a -- nei -- nu, ki | ein ba -- nu  ma -- a -- | sim. __ a -- | sei i -- ma -- | nu, __ tse -- | da -- ka va -- che -- | sed, __ a -- | sei i -- ma -- nu, tse -- | da -- ka va -- che -- sed, | ve -- ho -- shi -- ei -- | nu. __ | nu. __
+	A -- | vi -- nu mal -- kei -- | nu, __ cho -- | nei -- nu va -- a -- nei -- | nu, __ a -- | vi -- nu mal -- kei -- nu, cho -- | nei -- nu va -- a -- nei -- nu, ki | ein ba -- nu  ma -- a -- | sim. __ A -- | sei i -- ma -- | nu, __ tze -- | da -- ka va -- che -- | sed, __ a -- | sei i -- ma -- nu, tze -- | da -- ka va -- che -- sed, | v' -- ho -- shi -- ei -- | nu. __ | nu. __
 }
 
 \score {
@@ -55,6 +48,13 @@ text = \lyricmode {
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
 	>>
+
+	\header {
+		title = "Avinu Malkeinu"
+		subtitle = "אָבִינוּ מַלְכֵּנוּ‎"
+		composer = "Folk melody"
+		arranger = "trans. E. Schleifer, 1988"
+	}
 
 	\layout { }
 	\midi { }

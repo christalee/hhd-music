@@ -1,11 +1,6 @@
 %{ TODO fix harmony %}
 \include "cbieber.ily"
 
-\header {
-	title = "Av Harachamim"
-	poet = "Liturgy"
-}
-
 harmony = \chordmode {
 	e4:m b:m/d a:m/c a:m | e1:m/g | a2:m/c g4/b d:7/a | e2:m/g c4 a:m6 | e2:m/b d2 | e1:m |
 	g2. b4:m/fis | e2.:m g4/d | c4 g/d c:6 d:7 | g1 | a2:m/c g4/b d:7/a | e2:m/g c4. a8:m6 | e2:m/b d2 | e1:m |
@@ -35,6 +30,11 @@ text = \lyricmode {
 	\new Lyrics \lyricsto "chorus" { \text }
 	>>
 
-	\layout { }
+	\header {
+		title = "Av Harachamim"
+		poet = "Liturgy"
+	}
+
 	\midi { }
+	\layout { }
 }

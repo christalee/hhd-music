@@ -1,12 +1,6 @@
 %{ TODO figure out harmony %}
 \include "cbieber.ily"
 
-\header {
-	title = "V'ha-eir Eineinu"
-	poet = "Psalm 86:11"
-	composer = "Shlomo Carlebach"
-}
-
 harmonyA = \chordmode {
 	\partial 8 s8 | a2:m d:m/e:7 | a:m e:7 | f/a:m c/a:7 | d:m g | d:m7 g:7 | c f/a:m | a:m d:m/f:7 | e:7 a:m |
 
@@ -42,7 +36,7 @@ verseB = \lyricmode {
 	\set ignoreMelismata = ##t
 	ha -- ga -- dol v' -- ha -- no -- ra __ _ | ba -- _
 	\unset ignoreMelismata
-	tach -- nu | na -- gi -- la | v' -- nis m' -- cha __ _ | na -- gi -- la
+	tach -- nu | na -- gi -- la | v' -- nis -- m' -- cha __ _ | na -- gi -- la
 	\set ignoreMelismata = ##t
 	v' -- nis m' -- cha | vi -- shu -- a --
 	\unset ignoreMelismata
@@ -55,8 +49,8 @@ refrain = \lyricmode {
 
 \score {
 	<<
-	%{ \new ChordNames { \harmonyA }
-	\new ChordNames { \harmonyB } %}
+	%{ \new ChordNames { \harmonyA } %}
+	\new ChordNames { \harmonyB }
 	\new Voice = "chorus" {
 		\time 4/4
 		\key c \minor
@@ -78,6 +72,12 @@ refrain = \lyricmode {
 
 	}
 	>>
+
+	\header {
+		title = "V'ha-eir Eineinu"
+		poet = "Psalm 86:11"
+		composer = "Shlomo Carlebach"
+	}
 
 	\layout { }
 	\midi { }

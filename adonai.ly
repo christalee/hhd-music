@@ -1,12 +1,6 @@
 %{ TODO fix harmony %}
 \include "cbieber.ily"
 
-\header {
-	title = "Adonai Adonai"
-	composer = "Traditional"
-	arranger = "ed. Leuchter"
-}
-
 harmony = \chordmode {
 	\partial 4 s4 | d2.:m | d2.:m | d2.:m | f2.:m/c |
 	g2.:m | g2.:m | a2.:7 | d2.:m |
@@ -34,7 +28,7 @@ melody = \relative c' {
 
 text = \lyricmode {
 	A -- do -- | nai, A -- do -- | nai, el | ra -- chum v' -- | cha -- nun, | e -- rech a -- | pa -- yim v' -- rav | che -- sed v' -- | e -- met __ |
-	No -- tser | che -- sed la -- | a -- la -- fim __ | no -- sey | a -- von va -- | fe -- sha v' -- cha -- | ta -- a v' -- na -- | key. | -ta -- a v' -- na -- | key. __
+	No -- tzeir | che -- sed la -- | a -- la -- fim __ | no -- sei | a -- von va -- | fe -- sha v' -- cha -- | ta -- a v' -- na -- | kei. | -ta -- a v' -- na -- | kei. __
 }
 
 \score {
@@ -43,6 +37,12 @@ text = \lyricmode {
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
 	>>
+
+	\header {
+		title = "Adonai Adonai"
+		composer = "Traditional"
+		arranger = "ed. Leuchter"
+	}
 
 	\layout { }
 	\midi { }

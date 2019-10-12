@@ -1,26 +1,15 @@
 \include "cbieber.ily"
 
-\paper {
-		system-system-spacing.padding = #3
-}
-
-\header {
-	instrument = "Half Kaddish"
-	composer = "Wolf Shastopol"
-	arranger = "ed. Laurence Avery"
-}
-
 text = \lyricmode {
 	Yit -- ga -- dal __ | v' -- yit -- ka -- dash __ | sh' -- me ra -- ba __ |
 	A -- MEN |
-	B' -- al' -- ma __ | div' -- ra chi -- ru -- te __ v' -- yam -- lich __ | mal __ chu -- te.
+	B' -- al' -- ma __ | div' -- ra chi -- ru -- te __ v' -- yam -- lich __ | mal -- chu -- te.
 
-	B' -- cha -- ye -- chom uv' -- yo -- me -- chon, u -- v' -- cha -- ye d' -- chol beit Yis -- ra -- el, ba -- ga -- la __ u' -- viz' -- man ka -- riv |
-	v' -- im -- m' -- ru A -- men. Y' -- he sh'me ra -- ba m' -- va -- rach l' -- a -- lam ul' -- al' -- me al' -- ma -- ya yit -- ba -- rach |
+	B' -- cha -- ye -- chon uv' -- yo -- me -- chon, u -- v' -- cha -- ye d' -- chol beit Yis -- ra -- el, ba -- ga -- la __ u' -- viz' -- man ka -- riv,	v' -- im -- m' -- ru: A -- men. Y' -- he sh'me ra -- ba m' -- va -- rach l' -- a -- lam ul' -- al' -- me al' -- ma -- ya yit -- ba -- rach |
 }
 
 verseA = \lyricmode {
-	yit -- ba -- rach v' -- yish -- ta -- bach v' -- yit -- pa -- ar __ v' -- yit -- ro -- mam v' --
+	Yit -- ba -- rach v' -- yish -- ta -- bach v' -- yit -- pa -- ar __ v' -- yit -- ro -- mam v' --
 }
 
 verseB = \lyricmode {
@@ -30,8 +19,8 @@ verseB = \lyricmode {
 coda = \lyricmode {
 	sh'me d' -- ku -- d' -- sha |
 	B'rich hu l' -- e -- la -- lu -- le -- la -- min kol bir -- cha -- ta v' -- shi -- ra -- ta,
-	tush -- b' -- cha -- ta v' -- ne -- che -- ma -- ta, da' -- a -- mi -- ran b' -- al' -- ma
-	v' -- im -- m' -- ru | A -- men. |
+	tush -- b' -- cha -- ta v' -- ne -- che -- ma -- ta, da' -- a -- mi -- ran b' -- al' -- ma,
+	v' -- im -- m' -- ru: | A -- men. |
 }
 
 melody = \relative c' {
@@ -71,6 +60,12 @@ melody = \relative c' {
 		\coda
 	}
 	>>
+
+	\header {
+		title = "Half Kaddish"
+		composer = "Wolf Shastopol"
+		arranger = "ed. Lawrence Avery"
+	}
 
 	\layout { }
 	\midi { }

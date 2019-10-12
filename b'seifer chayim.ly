@@ -1,11 +1,5 @@
 \include "cbieber.ily"
 
-\header {
-	title = "B'Seifer Chayim"
-	poet = "Liturgy"
-	composer = "Israel Goldfarb"
-}
-
 harmony = \chordmode {
 	\partial 8 s8 | e2:m e:m7/d | c4.:maj7 e8:m/b a4:m e4:m | fis2:m7.5- b4:7sus4 b4:7 | e1:m | e2:m e:m7/d | c4.:maj7 e8:m/b a4:m e4:m | fis2:m7.5- b2:7 | e1:m |
 	g4 g:7 c/g g | d2:7 b4:7/dis e:m | g2 c4/e fis:7 | b2 b:7 |
@@ -24,10 +18,10 @@ melody = \relative c' {
 }
 
 text = \lyricmode {
-	B' -- | sei -- fer cha -- yim b' -- | ra -- cha v' -- sha -- lom | u -- far -- na -- sa to -- | va |
-	ni -- za -- cheir v' -- | ni -- ka -- teiv __ | l' -- fa -- ne -- | cha a -- |
-	nach -- nu v' -- | chol am -- cha __ | beit Yis -- ra -- | eil l' -- |
-	cha -- yim, to -- vim l' -- | cha -- yim to -- vim | ul' -- sha -- | lom. |
+	B' -- | sei -- fer cha -- yim b' -- | ra -- cha v' -- sha -- lom | u -- far -- na -- sa to -- | va, |
+	ni -- za -- cheir v' -- | ni -- ka -- teiv __ | l' -- fa -- ne -- | cha, a -- |
+	nach -- nu v' -- | chol am -- cha __ | beit Yis -- ra -- | eil, l' -- |
+	cha -- yim to -- vim, l' -- | cha -- yim to -- vim | ul' -- sha -- | lom. |
 }
 
 \score {
@@ -36,6 +30,12 @@ text = \lyricmode {
 	\new Voice = "chorus" { \melody }
 	\new Lyrics \lyricsto "chorus" { \text }
 	>>
+
+	\header {
+		title = "B'seifer Chayim"
+		poet = "Liturgy"
+		composer = "Israel Goldfarb"
+	}
 
 	\layout { }
 	\midi { }
